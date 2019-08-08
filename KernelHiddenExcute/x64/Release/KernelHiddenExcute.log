@@ -1,0 +1,8 @@
+﻿  Building 'KernelHiddenExcute' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  Stamping x64\Release\KernelHiddenExcute.inf [Version] section with DriverVer=03/16/2019,14.54.32.33
+  main.c
+  KernelHiddenExcute.vcxproj -> C:\Users\zxy20\source\repos\KernelHiddenExcute\x64\Release\KernelHiddenExcute.sys
+  KernelHiddenExcute.vcxproj -> C:\Users\zxy20\source\repos\KernelHiddenExcute\x64\Release\KernelHiddenExcute.pdb (Full PDB)
+  Done Adding Additional Store
+  Successfully signed: C:\Users\zxy20\source\repos\KernelHiddenExcute\x64\Release\KernelHiddenExcute.sys
+  
