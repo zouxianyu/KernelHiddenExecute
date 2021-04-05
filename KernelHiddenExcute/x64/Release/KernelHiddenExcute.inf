@@ -7,23 +7,23 @@ Signature="$WINDOWS NT$"
 Class=System
 ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider=XYLab
-DriverVer=08/09/2019,0.23.37.707
+DriverVer = 04/05/2021,13.21.42.137
 CatalogFile=KernelHiddenExcute.inf.cat
 
-[DestinationDirs]
-DefaultDestDir = 12
+;[DestinationDirs]
+;DefaultDestDir = 12
 
 
-[SourceDisksNames]
-1 = %DiskName%,,,""
+;[SourceDisksNames]
+;1 = %DiskName%,,,""
 
-[SourceDisksFiles]
+;[SourceDisksFiles]
 
 
-[Manufacturer]
-%ManufacturerName%=Standard,NTamd64
+;[Manufacturer]
+;%ManufacturerName%=Standard,NT$ARCH$
 
-[Standard.NTamd64]
+;[Standard.NT$ARCH$]
 
 
 [Strings]

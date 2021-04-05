@@ -6,10 +6,9 @@
 Signature="$WINDOWS NT$"
 Class=System
 ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318}
-Provider=%ManufacturerName%
-DriverVer = 04/05/2021,11.39.18.458
+Provider=XYLab
+DriverVer = 04/05/2021,14.0.58.364
 CatalogFile=KernelHiddenExecute.cat
-PnpLockDown=1
 
 ;[DestinationDirs]
 ;DefaultDestDir = 12
@@ -28,6 +27,6 @@ PnpLockDown=1
 
 
 [Strings]
-ManufacturerName="XYLab" ;TODO: Replace with your manufacturer name
+ManufacturerName="XYLab"
 ClassName=""
 DiskName="KernelHiddenExecute Source Disk"

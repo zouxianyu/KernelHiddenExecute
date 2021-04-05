@@ -1,287 +1,8 @@
 ﻿  Building 'KernelHiddenExecute' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
   Stamping x64\Debug\KernelHiddenExecute.inf
-  Stamping [Version] section with DriverVer=04/05/2021,11.39.18.458
-  main.c
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(192,5): warning C4820: “_SID_AND_ATTRIBUTES”:“4”字节填充添加在 数据成员“Attributes”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(202,32): warning C4820: “_SID_AND_ATTRIBUTES_HASH”:“4”字节填充添加在 数据成员“SidCount”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(979,14): warning C4820: “_SECURITY_DESCRIPTOR”:“4”字节填充添加在 数据成员“Control”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(1004,21): warning C4820: “_OBJECT_TYPE_LIST”:“4”字节填充添加在 数据成员“Sbz”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(1154,49): warning C4820: “_SE_ACCESS_REQUEST”:“4”字节填充添加在 数据成员“Size”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(1160,37): warning C4820: “_SE_ACCESS_REQUEST”:“4”字节填充添加在 数据成员“ObjectTypeListCount”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(1209,1): warning C4820: “_SE_AUDIT_INFO”:“6”字节填充添加在 数据成员“GenerateOnClose”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(1378,1): warning C4820: “_SE_TOKEN_USER”:“4”字节填充添加在 数据成员“<alignment member>”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(1390,45): warning C4820: “_TOKEN_GROUPS”:“4”字节填充添加在 数据成员“GroupCount”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(1477,20): warning C4820: “_TOKEN_ACCESS_INFORMATION”:“4”字节填充添加在 数据成员“AppContainerNumber”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(1553,1): warning C4820: “_TOKEN_BNO_ISOLATION_INFORMATION”:“7”字节填充添加在 数据成员“IsolationEnabled”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(1599,1): warning C4820: “_CLAIM_SECURITY_ATTRIBUTE_OCTET_STRING_VALUE”:“4”字节填充添加在 数据成员“ValueLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(1712,13): warning C4820: “_CLAIM_SECURITY_ATTRIBUTE_V1”:“4”字节填充添加在 数据成员“ValueCount”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(2171,26): warning C4820: “_RTL_HEAP_PARAMETERS”:“4”字节填充添加在 数据成员“Length”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(2201,27): warning C4820: “_RTL_SEGMENT_HEAP_MEMORY_SOURCE”:“4”字节填充添加在 数据成员“NumaNode”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(2236,36): warning C4820: “_RTL_HEAP_MEMORY_LIMIT_INFO”:“4”字节填充添加在 数据成员“Version”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(3101,47): warning C4820: “_PREFIX_TABLE_ENTRY”:“4”字节填充添加在 数据成员“NameLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(3110,39): warning C4820: “_PREFIX_TABLE”:“4”字节填充添加在 数据成员“NameLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(3171,55): warning C4820: “_UNICODE_PREFIX_TABLE_ENTRY”:“4”字节填充添加在 数据成员“NameLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(3181,47): warning C4820: “_UNICODE_PREFIX_TABLE”:“4”字节填充添加在 数据成员“NameLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(5426,35): warning C4820: “_MSV1_0_INTERACTIVE_LOGON”:“4”字节填充添加在 数据成员“MessageType”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(5470,1): warning C4820: “_MSV1_0_INTERACTIVE_PROFILE”:“4”字节填充添加在 数据成员“UserFlags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(5589,35): warning C4820: “_MSV1_0_LM20_LOGON”:“4”字节填充添加在 数据成员“MessageType”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(5596,1): warning C4820: “_MSV1_0_LM20_LOGON”:“4”字节填充添加在 数据成员“ParameterControl”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(5604,35): warning C4820: “_MSV1_0_SUBAUTH_LOGON”:“4”字节填充添加在 数据成员“MessageType”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(5682,30): warning C4820: “_MSV1_0_LM20_LOGON_PROFILE”:“4”字节填充添加在 数据成员“MessageType”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(5686,35): warning C4820: “_MSV1_0_LM20_LOGON_PROFILE”:“4”字节填充添加在 数据成员“UserSessionKey”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(5763,1): warning C4820: “_MSV1_0_IUM_SUPPLEMENTAL_CREDENTIAL”:“3”字节填充添加在 数据成员“EncryptedCreds”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(5831,1): warning C4820: “_MSV1_0_NTLM3_RESPONSE”:“3”字节填充添加在 数据成员“Buffer”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(5988,42): warning C4820: “_MSV1_0_GETCHALLENRESP_RESPONSE”:“4”字节填充添加在 数据成员“MessageType”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6022,17): warning C4820: “_MSV1_0_GETUSERINFO_RESPONSE”:“4”字节填充添加在 数据成员“MessageType”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6027,1): warning C4820: “_MSV1_0_GETUSERINFO_RESPONSE”:“4”字节填充添加在 数据成员“LogonType”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6030,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6283,1): warning C4820: “_FILE_NOTIFY_INFORMATION”:“2”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6285,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS3”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6301,1): warning C4820: “_FILE_NOTIFY_EXTENDED_INFORMATION”:“2”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6331,1): warning C4820: “_FILE_DIRECTORY_INFORMATION”:“6”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6346,1): warning C4820: “_FILE_FULL_DIR_INFORMATION”:“2”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6360,25): warning C4820: “_FILE_ID_FULL_DIR_INFORMATION”:“4”字节填充添加在 数据成员“EaSize”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6362,1): warning C4820: “_FILE_ID_FULL_DIR_INFORMATION”:“6”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6377,24): warning C4820: “_FILE_BOTH_DIR_INFORMATION”:“1”字节填充添加在 数据成员“ShortNameLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6394,24): warning C4820: “_FILE_ID_BOTH_DIR_INFORMATION”:“1”字节填充添加在 数据成员“ShortNameLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6395,25): warning C4820: “_FILE_ID_BOTH_DIR_INFORMATION”:“2”字节填充添加在 数据成员“ShortName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6397,1): warning C4820: “_FILE_ID_BOTH_DIR_INFORMATION”:“6”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6404,1): warning C4820: “_FILE_NAMES_INFORMATION”:“2”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6421,1): warning C4820: “_FILE_ID_GLOBAL_TX_DIR_INFORMATION”:“2”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6442,1): warning C4820: “_FILE_ID_EXTD_DIR_INFORMATION”:“6”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6459,24): warning C4820: “_FILE_ID_EXTD_BOTH_DIR_INFORMATION”:“1”字节填充添加在 数据成员“ShortNameLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6461,1): warning C4820: “_FILE_ID_EXTD_BOTH_DIR_INFORMATION”:“4”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6688,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6695,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6703,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_19H1”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6710,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6718,25): warning C4820: “_FILE_LINK_INFORMATION”:“4”字节填充添加在 数据成员“<alignment member>”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6721,1): warning C4820: “_FILE_LINK_INFORMATION”:“2”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6732,25): warning C4820: “_FILE_MOVE_CLUSTER_INFORMATION”:“4”字节填充添加在 数据成员“ClusterCount”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6735,1): warning C4820: “_FILE_MOVE_CLUSTER_INFORMATION”:“2”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6744,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS1”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6749,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS3”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6753,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6761,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_19H1”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6768,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS1”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6776,25): warning C4820: “_FILE_RENAME_INFORMATION”:“4”字节填充添加在 数据成员“<alignment member>”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6779,1): warning C4820: “_FILE_RENAME_INFORMATION”:“2”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6793,1): warning C4820: “_FILE_STREAM_INFORMATION”:“6”字节填充添加在 数据成员“StreamName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6801,1): warning C4820: “_FILE_TRACKING_INFORMATION”:“3”字节填充添加在 数据成员“ObjectInformation”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6837,1): warning C4820: “_FILE_PIPE_REMOTE_INFORMATION”:“4”字节填充添加在 数据成员“MaximumCollectionCount”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6860,1): warning C4820: “_FILE_REPARSE_POINT_INFORMATION”:“4”字节填充添加在 数据成员“Tag”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6866,26): warning C4820: “_FILE_LINK_ENTRY_INFORMATION”:“4”字节填充添加在 数据成员“NextEntryOffset”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6869,1): warning C4820: “_FILE_LINK_ENTRY_INFORMATION”:“2”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6884,1): warning C4820: “_FILE_LINK_ENTRY_FULL_ID_INFORMATION”:“2”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6897,1): warning C4820: “_FILE_NETWORK_PHYSICAL_NAME_INFORMATION”:“2”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6906,1): warning C4820: “_FILE_STANDARD_LINK_INFORMATION”:“2”字节填充添加在 数据成员“Directory”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6919,1): warning C4820: “_FILE_GET_EA_INFORMATION”:“2”字节填充添加在 数据成员“EaName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6957,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS1”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6962,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS4”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(6966,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7042,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7077,1): warning C4820: “_FILE_QUOTA_INFORMATION”:“4”字节填充添加在 数据成员“Sid”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7086,1): warning C4820: “_FILE_VOLUME_NAME_INFORMATION”:“2”字节填充添加在 数据成员“DeviceName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7094,1): warning C4820: “_FILE_FS_ATTRIBUTE_INFORMATION”:“2”字节填充添加在 数据成员“FileSystemName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7098,29): warning C4820: “_FILE_FS_DRIVER_PATH_INFORMATION”:“3”字节填充添加在 数据成员“DriverInPath”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7100,1): warning C4820: “_FILE_FS_DRIVER_PATH_INFORMATION”:“2”字节填充添加在 数据成员“DriverName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7134,1): warning C4820: “_FILE_FS_CONTROL_INFORMATION”:“4”字节填充添加在 数据成员“FileSystemControlFlags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7141,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7155,1): warning C4820: “_FILE_END_OF_FILE_INFORMATION_EX”:“4”字节填充添加在 数据成员“Flags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7834,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_TH2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7840,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS1”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7845,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_TH2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7849,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_TH2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7855,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS1”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7859,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7869,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7873,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_TH2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7878,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS3”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7885,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS4”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7888,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS1”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7891,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS4”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7896,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS1”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7899,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(7924,1): warning C4820: “_PATHNAME_BUFFER”:“2”字节填充添加在 数据成员“Name”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8051,1): warning C4820: “<unnamed-tag>”:“4”字节填充添加在 数据成员“Flags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8061,1): warning C4820: “<unnamed-tag>”:“7”字节填充添加在 数据成员“Buffer”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8080,30): warning C4820: “RETRIEVAL_POINTERS_BUFFER”:“4”字节填充添加在 数据成员“ExtentCount”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8089,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8103,30): warning C4820: “RETRIEVAL_POINTERS_AND_REFCOUNT_BUFFER”:“4”字节填充添加在 数据成员“ExtentCount”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8108,5): warning C4820: “<unnamed-tag>”:“4”字节填充添加在 数据成员“ReferenceCount”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8113,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8150,1): warning C4820: “<unnamed-tag>”:“3”字节填充添加在 数据成员“FileRecordBuffer”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8167,1): warning C4820: “<unnamed-tag>”:“4”字节填充添加在 数据成员“ClusterCount”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8186,30): warning C4820: “_MOVE_FILE_DATA32”:“4”字节填充添加在 数据成员“FileHandle”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8190,1): warning C4820: “_MOVE_FILE_DATA32”:“4”字节填充添加在 数据成员“ClusterCount”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8211,1): warning C4820: “<unnamed-tag>”:“2”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8242,1): warning C4820: “<unnamed-tag>”:“4”字节填充添加在 数据成员“MaxMajorVersion”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8311,1): warning C4820: “<unnamed-tag>”:“4”字节填充添加在 数据成员“MaxMajorVersion”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8375,1): warning C4820: “<unnamed-tag>”:“2”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8394,1): warning C4820: “<unnamed-tag>”:“2”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8486,1): warning C4820: “<unnamed-tag>”:“4”字节填充添加在 数据成员“MaxSupportedMajorVersion”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8523,1): warning C4820: “<unnamed-tag>”:“4”字节填充添加在 数据成员“DeleteFlags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8556,24): warning C4820: “<unnamed-tag>”:“4”字节填充添加在 数据成员“<alignment member>”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8559,1): warning C4820: “<unnamed-tag>”:“4”字节填充添加在 数据成员“HandleInfo”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8871,21): warning C4820: “_NTFS_STATISTICS”:“2”字节填充添加在 数据成员“MftWritesUserRequest”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8884,25): warning C4820: “_NTFS_STATISTICS”:“2”字节填充添加在 数据成员“Mft2WritesUserRequest”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(8920,25): warning C4820: “_NTFS_STATISTICS”:“2”字节填充添加在 数据成员“MftBitmapWritesUserLevel”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(9012,25): warning C4820: “_NTFS_STATISTICS_EX”:“4”字节填充添加在 数据成员“MftWritesUserRequest”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(9025,29): warning C4820: “_NTFS_STATISTICS_EX”:“4”字节填充添加在 数据成员“Mft2WritesUserRequest”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(9046,29): warning C4820: “_NTFS_STATISTICS_EX”:“4”字节填充添加在 数据成员“BitmapWritesUserLevel”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(9062,29): warning C4820: “_NTFS_STATISTICS_EX”:“4”字节填充添加在 数据成员“MftBitmapWritesUserLevel”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(9100,30): warning C4820: “_NTFS_STATISTICS_EX”:“4”字节填充添加在 数据成员“DiskResourcesExhausted”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(9210,1): warning C4820: “_FILE_ZERO_DATA_INFORMATION_EX”:“4”字节填充添加在 数据成员“Flags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(9265,1): warning C4820: “_ENCRYPTION_BUFFER”:“3”字节填充添加在 数据成员“Private”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(9305,1): warning C4820: “_REQUEST_RAW_ENCRYPTED_DATA”:“4”字节填充添加在 数据成员“Length”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(9536,1): warning C4820: “_SI_COPYFILE”:“2”字节填充添加在 数据成员“FileNameBuffer”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(9575,27): warning C4820: “_FILE_QUERY_SPARING_BUFFER”:“3”字节填充添加在 数据成员“SoftwareSparing”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(9591,29): warning C4820: “_FILE_QUERY_ON_DISK_VOL_INFO_BUFFER”:“4”字节填充添加在 数据成员“FsFormatName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(9671,1): warning C4820: “_FILE_INITIATE_REPAIR_OUTPUT_BUFFER”:“4”字节填充添加在 数据成员“Status”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(9690,20): warning C4820: “_SHRINK_VOLUME_INFORMATION”:“4”字节填充添加在 数据成员“ShrinkRequestType”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(9818,1): warning C4820: “_TXFS_MODIFY_RM”:“6”字节填充添加在 数据成员“LoggingMode”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(9879,22): warning C4820: “_TXFS_QUERY_RM_INFORMATION”:“4”字节填充添加在 数据成员“BytesRequired”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(10031,1): warning C4820: “_TXFS_QUERY_RM_INFORMATION”:“4”字节填充添加在 数据成员“TmLogPathOffset”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(10052,1): warning C4820: “_TXFS_ROLLFORWARD_REDO_INFORMATION”:“4”字节填充添加在 数据成员“Flags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(10125,31): warning C4820: “_TXFS_START_RM_INFORMATION”:“4”字节填充添加在 数据成员“Flags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(10196,1): warning C4820: “_TXFS_START_RM_INFORMATION”:“2”字节填充添加在 数据成员“LogPath”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(10241,1): warning C4820: “_TXFS_GET_METADATA_INFO_OUT”:“4”字节填充添加在 数据成员“TransactionState”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(10282,20): warning C4820: “_TXFS_LIST_TRANSACTION_LOCKED_FILES_ENTRY”:“4”字节填充添加在 数据成员“NameFlags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(10297,1): warning C4820: “_TXFS_LIST_TRANSACTION_LOCKED_FILES_ENTRY”:“6”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(10355,23): warning C4820: “_TXFS_LIST_TRANSACTIONS_ENTRY”:“4”字节填充添加在 数据成员“Reserved2”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(10472,1): warning C4820: “_TXFS_GET_TRANSACTED_VERSION”:“2”字节填充添加在 数据成员“LatestMiniVersion”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(10570,1): warning C4820: “_TXFS_CREATE_MINIVERSION_INFO”:“2”字节填充添加在 数据成员“MiniVersion”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(10611,21): warning C4820: “_BOOT_AREA_INFO”:“4”字节填充添加在 数据成员“BootSectorCount”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(10814,1): warning C4820: “_REQUEST_OPLOCK_OUTPUT_BUFFER”:“2”字节填充添加在 数据成员“ShareMode”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(11092,1): warning C4820: “_SD_ENUM_SDS_ENTRY”:“3”字节填充添加在 数据成员“Descriptor”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(11278,1): warning C4820: “_LOOKUP_STREAM_FROM_CLUSTER_ENTRY”:“6”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(11347,1): warning C4820: “_CSV_NAMESPACE_INFO”:“4”字节填充添加在 数据成员“SectorSize”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(11376,20): warning C4820: “_CSV_CONTROL_PARAM”:“4”字节填充添加在 数据成员“Operation”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(11386,1): warning C4820: “_CSV_QUERY_REDIRECT_STATE”:“3”字节填充添加在 数据成员“FileRedirected”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(11465,1): warning C4820: “_CSV_QUERY_MDS_PATH”:“2”字节填充添加在 数据成员“Path”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(11483,45): warning C4820: “_CSV_QUERY_VOLUME_REDIRECT_STATE”:“2”字节填充添加在 数据成员“ClusterEnableDirectIo”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(11543,1): warning C4820: “_CSV_QUERY_MDS_PATH_V2”:“4”字节填充添加在 数据成员“PathLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(11565,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(11768,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(11871,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(11967,21): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(12041,1): warning C4820: “_FILE_LAYOUT_NAME_ENTRY”:“6”字节填充添加在 数据成员“FileName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(12054,5): warning C4820: “<unnamed-tag>”:“4”字节填充添加在 数据成员“FileAttributes”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(12071,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(12078,1): warning C4820: “_FILE_LAYOUT_INFO_ENTRY”:“4”字节填充添加在 数据成员“StorageReserveId”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(12170,1): warning C4820: “_STREAM_LAYOUT_ENTRY”:“6”字节填充添加在 数据成员“StreamIdentifier”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(12202,24): warning C4820: “_STREAM_EXTENT_ENTRY”:“4”字节填充添加在 数据成员“Flags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(12394,1): warning C4820: “_FILE_REGION_INPUT”:“4”字节填充添加在 数据成员“DesiredUsage”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(12575,43): warning C4820: “_FSCTL_QUERY_STORAGE_CLASSES_OUTPUT”:“4”字节填充添加在 数据成员“NumberOfTiersReturned”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(12822,23): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(12830,35): warning C4820: “_DUPLICATE_EXTENTS_DATA32”:“4”字节填充添加在 数据成员“FileHandle”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(12857,1): warning C4820: “_DUPLICATE_EXTENTS_DATA_EX”:“4”字节填充添加在 数据成员“Flags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(12872,1): warning C4820: “_DUPLICATE_EXTENTS_DATA_EX32”:“4”字节填充添加在 数据成员“Flags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(12878,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(12997,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS3”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(13147,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS4”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(13158,1): warning C4820: “_SET_DAX_ALLOC_ALIGNMENT_HINT_INPUT”:“4”字节填充添加在 数据成员“FallbackAlignmentShift”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(13160,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS4”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(13271,1): warning C4820: “_WIM_PROVIDER_EXTERNAL_INFO”:“4”字节填充添加在 数据成员“ResourceHash”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(13309,31): warning C4820: “_WIM_PROVIDER_OVERLAY_ENTRY”:“4”字节填充添加在 数据成员“NextEntryOffset”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(13371,1): warning C4820: “_CONTAINER_ROOT_INFO_OUTPUT”:“1”字节填充添加在 数据成员“ContainerRootId”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(13388,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS1”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(13399,16): warning C4820: “_VIRTUALIZATION_INSTANCE_INFO_INPUT_EX”:“2”字节填充添加在 数据成员“HeaderSize”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(13421,1): warning C4820: “_GET_FILTER_FILE_IDENTIFIER_OUTPUT”:“1”字节填充添加在 数据成员“FilterFileIdentifier”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(13472,9): warning C4820: “<unnamed-tag>”:“2”字节填充添加在 数据成员“PathBuffer”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(13512,1): warning C4820: “_REPARSE_GUID_DATA_BUFFER”:“3”字节填充添加在 数据成员“GenericReparseBuffer”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(14250,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS1”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(14315,1): warning C4820: “_REPARSE_DATA_BUFFER_EX”:“4”字节填充添加在 数据成员“<alignment member>”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(14359,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(14385,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_19H2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(14521,30): warning C4820: “_SCRUB_DATA_OUTPUT”:“4”字节填充添加在 数据成员“Status”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(14583,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(14709,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(14763,1): warning C4820: “_REARRANGE_FILE_DATA32”:“4”字节填充添加在 数据成员“Flags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(14785,1): warning C4820: “_SHUFFLE_FILE_DATA”:“4”字节填充添加在 数据成员“Flags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(14876,1): warning C4820: “_FILE_PIPE_ASSIGN_EVENT_BUFFER”:“4”字节填充添加在 数据成员“KeyValue”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(14886,1): warning C4820: “_FILE_PIPE_PEEK_BUFFER”:“3”字节填充添加在 数据成员“Data”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(14904,19): warning C4820: “_FILE_PIPE_WAIT_FOR_BUFFER”:“1”字节填充添加在 数据成员“TimeoutSpecified”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(14945,1): warning C4820: “_FILE_PIPE_CLIENT_PROCESS_BUFFER_EX”:“6”字节填充添加在 数据成员“ClientComputerBuffer”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15029,1): warning C4820: “_REMOTE_LINK_TRACKING_INFORMATION_”:“3”字节填充添加在 数据成员“TargetLinkTrackingInformationBuffer”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15032,22): warning C4668: 没有将“_WIN32_WINNT_THRESHOLD”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15167,47): warning C4820: “_VOLUME_REFS_INFO_BUFFER”:“4”字节填充添加在 数据成员“CompactionWriteLatencyBase”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15193,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_TH2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15204,1): warning C4820: “_FSCTL_GHOST_FILE_EXTENTS_INPUT_BUFFER”:“3”字节填充添加在 数据成员“RecallMetadataBuffer”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15228,1): warning C4820: “_GHOSTED_FILE_EXTENT”:“7”字节填充添加在 数据成员“RecallMetadataBuffer”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15236,1): warning C4820: “_FSCTL_QUERY_GHOSTED_FILE_EXTENTS_OUTPUT”:“3”字节填充添加在 数据成员“Extents”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15249,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_TH2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15264,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15277,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS2”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15293,55): warning C4820: “_REFS_DEALLOCATE_RANGES_INPUT_BUFFER”:“4”字节填充添加在 数据成员“RangeCount”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15300,22): warning C4668: 没有将“_WIN32_WINNT_WIN10_RS5”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15412,23): warning C4668: 没有将“NTDDI_NT4”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15488,22): warning C4820: “_MEMORY_BASIC_INFORMATION”:“2”字节填充添加在 数据成员“PartitionId”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15492,1): warning C4820: “_MEMORY_BASIC_INFORMATION”:“4”字节填充添加在 数据成员“Type”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15607,30): warning C4820: “_SECURITY_CLIENT_CONTEXT”:“4”字节填充添加在 数据成员“SecurityQos”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15611,37): warning C4820: “_SECURITY_CLIENT_CONTEXT”:“1”字节填充添加在 数据成员“ServerIsRemote”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15612,5): warning C4820: “_SECURITY_CLIENT_CONTEXT”:“4”字节填充添加在 数据成员“ClientTokenControl”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(15817,1): warning C4820: “_KAPC_STATE”:“5”字节填充添加在 数据成员“<alignment member>”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(17672,5): warning C4820: “<unnamed-tag>”:“4”字节填充添加在 数据成员“Flags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(17723,40): warning C4820: “_FS_FILTER_CALLBACK_DATA”:“2”字节填充添加在 数据成员“Reserved”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(17982,38): warning C4820: “_IO_CREATE_STREAM_FILE_OPTIONS”:“4”字节填充添加在 数据成员“Flags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(18628,70): warning C4820: “_IO_IRP_EXT_TRACK_OFFSET_HEADER”:“4”字节填充添加在 数据成员“Flags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(19019,29): warning C4820: “_PHYSICAL_MEMORY_DESCRIPTOR”:“4”字节填充添加在 数据成员“NumberOfRuns”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(19756,14): warning C4820: “_FILE_LOCK_INFO”:“3”字节填充添加在 数据成员“ExclusiveLock”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(19822,28): warning C4820: “_FILE_LOCK”:“4”字节填充添加在 数据成员“SpareC”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(19838,1): warning C4820: “_FILE_LOCK”:“4”字节填充添加在 数据成员“LockRequestsInProgress”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(20146,1): warning C4820: “<unnamed-tag>”:“6”字节填充添加在 数据成员“NumEntries”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(20536,18): warning C4820: “_BASE_MCB”:“4”字节填充添加在 数据成员“Flags”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(21296,1): warning C4820: “_DUAL_OPLOCK_KEY_ECP_CONTEXT”:“2”字节填充添加在 数据成员“TargetOplockKeySet”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(21810,33): warning C4820: “_FSRTL_MUP_PROVIDER_INFO_LEVEL_2”:“4”字节填充添加在 数据成员“ProviderId”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(23205,23): warning C4820: “_NETWORK_APP_INSTANCE_VERSION_ECP_CONTEXT”:“4”字节填充添加在 数据成员“Reserved”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(23382,19): warning C4820: “_SRV_OPEN_ECP_CONTEXT”:“1”字节填充添加在 数据成员“OplockFinalState”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(23397,35): warning C4820: “_SRV_OPEN_ECP_CONTEXT”:“2”字节填充添加在 数据成员“Version”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(23401,1): warning C4820: “_SRV_OPEN_ECP_CONTEXT”:“4”字节填充添加在 数据成员“InstanceType”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(23539,38): warning C4820: “_CSV_DOWN_LEVEL_OPEN_ECP_CONTEXT”:“3”字节填充添加在 数据成员“IsResume”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(23829,1): warning C4820: “_OPEN_REPARSE_LIST_ENTRY”:“4”字节填充添加在 数据成员“RemainingLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(23888,23): warning C4668: 没有将“NTDDI_THRESHOLD”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(24381,30): warning C4820: “_OPLOCK_NOTIFY_PARAMS”:“4”字节填充添加在 数据成员“NotifyReason”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(24396,1): warning C4820: “_OPLOCK_NOTIFY_PARAMS”:“4”字节填充添加在 数据成员“Status”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(24473,1): warning C4820: “_QUERY_ON_CREATE_FILE_STAT_INFORMATION”:“4”字节填充添加在 数据成员“NumberOfLinks”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(24505,39): warning C4820: “_QUERY_ON_CREATE_EA_INFORMATION”:“4”字节填充添加在 数据成员“EaBufferSize”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(24529,49): warning C4820: “_QUERY_ON_CREATE_ECP_CONTEXT”:“4”字节填充添加在 数据成员“LxInformation”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(24764,23): warning C4668: 没有将“NTDDI_THRESHOLD”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(24833,18): warning C4255: “FsRtlIsMobileOS”: 未给出函数原型: 将“()”转换为“(void)”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(24907,22): warning C4820: “_READ_AHEAD_PARAMETERS”:“2”字节填充添加在 数据成员“NodeByteSize”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(25099,23): warning C4820: “_CC_ASYNC_READ_CONTEXT”:“3”字节填充添加在 数据成员“RequestorMode”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(25979,23): warning C4820: “_CC_ERROR_CALLBACK_CONTEXT”:“2”字节填充添加在 数据成员“NodeByteSize”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26072,21): warning C4820: “_SecPkgInfoW”:“4”字节填充添加在 数据成员“cbMaxToken”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26228,1): warning C4820: “_SEC_APPLICATION_PROTOCOL_LIST”:“1”字节填充添加在 数据成员“ProtocolList”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26252,1): warning C4820: “_SEC_TOKEN_BINDING”:“1”字节填充添加在 数据成员“KeyParameters”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26257,1): warning C4820: “_SEC_PRESHAREDKEY”:“1”字节填充添加在 数据成员“Key”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26262,1): warning C4820: “_SEC_PRESHAREDKEY_IDENTITY”:“1”字节填充添加在 数据成员“KeyIdentity”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26295,1): warning C4820: “_SEC_TRAFFIC_SECRETS”:“1”字节填充添加在 数据成员“TrafficSecret”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26479,29): warning C4820: “_SecPkgCredentials_SSIProviderW”:“4”字节填充添加在 数据成员“ProviderInfoLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26502,31): warning C4820: “_SecPkgCredentials_Cert”:“4”字节填充添加在 数据成员“EncodedCertSize”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26639,16): warning C4820: “_SecPkgContext_DceInfo”:“4”字节填充添加在 数据成员“AuthzSvc”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26650,1): warning C4820: “_SecPkgContext_KeyInfoW”:“4”字节填充添加在 数据成员“EncryptAlgorithm”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26688,68): warning C4820: “_SecPkgContext_SessionKey”:“4”字节填充添加在 数据成员“SessionKeyLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26696,56): warning C4820: “_SecPkgContext_NegoKeys”:“2”字节填充添加在 数据成员“KeyLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26699,68): warning C4820: “_SecPkgContext_NegoKeys”:“2”字节填充添加在 数据成员“VerifyKeyLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26724,1): warning C4820: “_SecPkgContext_NegotiationInfoW”:“4”字节填充添加在 数据成员“NegotiationState”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26734,31): warning C4820: “_SecPkgContext_CredentialNameW”:“4”字节填充添加在 数据成员“CredentialType”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(26901,43): warning C4255: “SspiCreateAsyncContext”: 未给出函数原型: 将“()”转换为“(void)”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(27562,28): warning C4668: 没有将“NTDD_WIN2K”定义为预处理器宏，用“0”替换“#if/#elif”
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(27649,67): warning C4820: “_SECURITY_FUNCTION_TABLE_W”:“4”字节填充添加在 数据成员“dwVersion”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(27724,35): warning C4820: “_SEC_WINNT_AUTH_IDENTITY_EX2”:“2”字节填充添加在 数据成员“cbHeaderLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(27727,30): warning C4820: “_SEC_WINNT_AUTH_IDENTITY_EX2”:“2”字节填充添加在 数据成员“UserLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(27729,41): warning C4820: “_SEC_WINNT_AUTH_IDENTITY_EX2”:“2”字节填充添加在 数据成员“DomainLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(27731,23): warning C4820: “_SEC_WINNT_AUTH_IDENTITY_EX2”:“2”字节填充添加在 数据成员“PackedCredentialsLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(27734,1): warning C4820: “_SEC_WINNT_AUTH_IDENTITY_EX2”:“2”字节填充添加在 数据成员“PackageListLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(27753,25): warning C4820: “_SEC_WINNT_AUTH_IDENTITY_W”:“4”字节填充添加在 数据成员“UserLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(27755,27): warning C4820: “_SEC_WINNT_AUTH_IDENTITY_W”:“4”字节填充添加在 数据成员“DomainLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(27779,27): warning C4820: “_SEC_WINNT_AUTH_IDENTITY_EXW”:“4”字节填充添加在 数据成员“UserLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(27781,29): warning C4820: “_SEC_WINNT_AUTH_IDENTITY_EXW”:“4”字节填充添加在 数据成员“DomainLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(27786,1): warning C4820: “_SEC_WINNT_AUTH_IDENTITY_EXW”:“4”字节填充添加在 数据成员“PackageListLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(28023,44): warning C4820: “_QUERY_PATH_REQUEST”:“4”字节填充添加在 数据成员“PathNameLength”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(28025,1): warning C4820: “_QUERY_PATH_REQUEST”:“6”字节填充添加在 数据成员“FilePathName”后
-D:\Windows Kits\10\Include\10.0.19041.0\km\ntifs.h(28038,38): warning C4820: “_QUERY_PATH_REQUEST_EX”:“4”字节填充添加在 数据成员“EaLength”后
+  Stamping [Version] section with DriverVer=04/05/2021,14.0.58.364
+C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\KernelHiddenExecute.inf(5-5): warning 1324: [Version] section should specify PnpLockdown=1.
+  HiddenExecute.c
 D:\Windows Kits\10\Include\10.0.19041.0\km\crt\smmintrin.h(82,5): warning C4668: 没有将“__cplusplus”定义为预处理器宏，用“0”替换“#if/#elif”
 D:\Windows Kits\10\Include\10.0.19041.0\km\crt\nmmintrin.h(35,5): warning C4668: 没有将“__cplusplus”定义为预处理器宏，用“0”替换“#if/#elif”
 D:\Windows Kits\10\Include\10.0.19041.0\km\crt\wmmintrin.h(34,5): warning C4668: 没有将“__cplusplus”定义为预处理器宏，用“0”替换“#if/#elif”
@@ -367,19 +88,27 @@ C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenEx
 C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.h(65,3): warning C4201: 使用了非标准扩展: 无名称的结构/联合
 C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.h(80,26): warning C4820: “_HIDDEN_PAGE_RECORD”:“3”字节填充添加在 数据成员“OriginalIrql”后
 C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.h(81,26): warning C4820: “_HIDDEN_PAGE_RECORD”:“4”字节填充添加在 数据成员“IsIrqlChanged”后
-C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\main.h(29,19): warning C4255: “WriteEnable”: 未给出函数原型: 将“()”转换为“(void)”
-C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\main.h(30,20): warning C4255: “WriteDisable”: 未给出函数原型: 将“()”转换为“(void)”
-C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\main.c(13,40): warning C4100: “pDevObj”: 未引用的形参
-C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\main.c(21,39): warning C4100: “pDevObj”: 未引用的形参
-C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\main.c(29,39): warning C4100: “pDevObj”: 未引用的形参
-C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\main.c(35,8): warning C4189: “uInSize”: 局部变量已初始化但不引用
-C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\main.c(73,1): warning C4255: “WriteEnable”: 未给出函数原型: 将“()”转换为“(void)”
-C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\main.c(80,1): warning C4255: “WriteDisable”: 未给出函数原型: 将“()”转换为“(void)”
-C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\main.c(86,65): warning C4100: “pRegistryString”: 未引用的形参
-C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\main.c(110): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
-  C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\main.c(107) : 注意: 在此行上通过对比检查索引 "status" 范围
-  C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\main.c(110) : 注意: 此行上的源调用
-C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\main.c(102): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
-  C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\main.c(100) : 注意: 在此行上通过对比检查索引 "status" 范围
-  C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\main.c(102) : 注意: 此行上的源调用
+C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(26,43): warning C4996: 'ExAllocatePool': 被声明为已否决
+C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(342,20): warning C4388: “<”: 有符号/无符号不匹配
+C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(327,11): warning C4189: “Status”: 局部变量已初始化但不引用
+C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(417,20): warning C4388: “<”: 有符号/无符号不匹配
+C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(387,11): warning C4189: “Status”: 局部变量已初始化但不引用
+C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(472,20): warning C4388: “<”: 有符号/无符号不匹配
+C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(456,11): warning C4189: “Status”: 局部变量已初始化但不引用
+C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(544,20): warning C4388: “<”: 有符号/无符号不匹配
+C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(352): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
+  C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(342) : 注意: 在此行上通过对比检查索引 "" 范围
+  C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(352) : 注意: 此行上的源内存负载
+C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(478): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
+  C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(472) : 注意: 在此行上通过对比检查索引 "" 范围
+  C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(478) : 注意: 此行上的源内存负载
+C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(423): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
+  C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(417) : 注意: 在此行上通过对比检查索引 "" 范围
+  C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(423) : 注意: 此行上的源内存负载
+C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(551): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
+  C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(550) : 注意: 在此行上通过对比检查索引 "Status" 范围
+  C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(551) : 注意: 此行上的源调用
+C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(547): warning C5045: 如果指定了 /Qspectre 开关，编译器会插入内存负载的 Spectre 缓解
+  C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(544) : 注意: 在此行上通过对比检查索引 "" 范围
+  C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExecute\HiddenExecute.c(547) : 注意: 此行上的源调用
   KernelHiddenExecute.vcxproj -> C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\x64\Debug\KernelHiddenExecute.sys

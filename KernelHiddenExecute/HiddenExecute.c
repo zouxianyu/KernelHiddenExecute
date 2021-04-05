@@ -24,6 +24,10 @@ NTSTATUS InitializeHiddenPageRecordStructure(PHIDDEN_PAGE_RECORD* ppHiddenPageRe
 
 	PHIDDEN_PAGE_RECORD pHiddenPageRecord = NULL;
 	pHiddenPageRecord = (PHIDDEN_PAGE_RECORD)ExAllocatePool(NonPagedPool, HIDDEN_PAGE_RECORD_LENGTH);
+	if (!pHiddenPageRecord)
+		return STATUS_UNSUCCESSFUL;
+
+	RtlZeroMemory(pHiddenPageRecord, HIDDEN_PAGE_RECORD_LENGTH);
 	*ppHiddenPageRecord = pHiddenPageRecord;
 
 	MyPrint(_TitleAndFunc"pHiddenPageRecord:%16IX\n", pHiddenPageRecord);
