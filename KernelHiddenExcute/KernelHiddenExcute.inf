@@ -10,20 +10,20 @@ Provider=XYLab
 DriverVer=
 CatalogFile=KernelHiddenExcute.inf.cat
 
-[DestinationDirs]
-DefaultDestDir = 12
+;[DestinationDirs]
+;DefaultDestDir = 12
 
 
-[SourceDisksNames]
-1 = %DiskName%,,,""
+;[SourceDisksNames]
+;1 = %DiskName%,,,""
 
-[SourceDisksFiles]
+;[SourceDisksFiles]
 
 
-[Manufacturer]
-%ManufacturerName%=Standard,NT$ARCH$
+;[Manufacturer]
+;%ManufacturerName%=Standard,NT$ARCH$
 
-[Standard.NT$ARCH$]
+;[Standard.NT$ARCH$]
 
 
 [Strings]
