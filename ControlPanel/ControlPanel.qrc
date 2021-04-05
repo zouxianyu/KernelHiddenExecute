@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/malware.png</file>
+        <file>resources/safeProcedure.png</file>
+        <file>resources/unsafeProcedure.png</file>
+        <file>resources/start.png</file>
+    </qresource>
+</RCC>
