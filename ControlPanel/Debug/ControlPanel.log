@@ -1,7 +1,5 @@
-﻿  uic ControlPanel.ui
-  rcc ControlPanel.qrc
+﻿  moc ControlPanel.h
   ControlPanel.cpp
   main.cpp
   moc_ControlPanel.cpp
-  qrc_ControlPanel.cpp
   ControlPanel.vcxproj -> C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\Debug\ControlPanel.exe
