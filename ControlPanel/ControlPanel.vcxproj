@@ -46,6 +46,16 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
   </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Link>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Link>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="QtSettings">
     <QtInstall>msvc2017</QtInstall>
     <QtModules>core;gui;widgets</QtModules>
@@ -91,14 +101,14 @@
     <QtMoc Include="ControlPanel.h" />
     <ClCompile Include="ControlPanel.cpp" />
     <ClCompile Include="dlcommon.cpp" />
-    <ClCompile Include="dldrivers.cpp" />
+    <ClCompile Include="dlioctl.cpp" />
     <ClCompile Include="dlservices.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dlcommon.h" />
     <ClInclude Include="dlconfig.h" />
-    <ClInclude Include="dldrivers.h" />
+    <ClInclude Include="dlioctl.h" />
     <ClInclude Include="dlservices.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

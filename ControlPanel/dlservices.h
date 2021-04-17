@@ -1,5 +1,4 @@
-#ifndef DLSERVICES_H
-#define DLSERVICES_H
+#pragma once
 
 /*
     This file is part of driver-loader
@@ -55,4 +54,3 @@ namespace Services {
     SC_HANDLE Open(QString service);
 }
 
-#endif // DLSERVICES_H

@@ -1,5 +1,4 @@
-#ifndef DLCOMMON_H
-#define DLCOMMON_H
+#pragma once
 
 /*
     This file is part of driver-loader
@@ -47,5 +46,3 @@ namespace Common {
     //console.log
     void ConsoleLog(QString log);
 }
-
-#endif // DLCOMMON_H

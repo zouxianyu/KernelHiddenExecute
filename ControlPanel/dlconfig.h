@@ -1,5 +1,4 @@
-#ifndef DLCONFIG_H
-#define DLCONFIG_H
+#pragma once
 
 /*
     This file is part of driver-loader
@@ -23,8 +22,7 @@
     For more see the file 'LICENSE' for copying permission.
 */
 
-#define APP_VERSION "1.0"
-#define APP_DATE    "March, 2017"
+//#define APP_VERSION "1.0"
+//#define APP_DATE    "March, 2017"
 #define DEBUG   1
 
-#endif // DLCONFIG_H

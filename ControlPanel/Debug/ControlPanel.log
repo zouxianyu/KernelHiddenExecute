@@ -1,5 +1,2 @@
-﻿  moc ControlPanel.h
-  ControlPanel.cpp
-  main.cpp
-  moc_ControlPanel.cpp
+﻿  Reading Qt configuration (C:/Qt/Qt5.12.10/5.12.10/msvc2017/bin/qmake)
   ControlPanel.vcxproj -> C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\Debug\ControlPanel.exe
