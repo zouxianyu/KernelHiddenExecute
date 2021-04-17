@@ -36,14 +36,14 @@ public:
     QToolButton *initBtn;
     QSpacerItem *horizontalSpacer_2;
     QWidget *procedurePage;
-    QHBoxLayout *horizontalLayout_4;
-    QToolButton *safeProcBtn;
-    QToolButton *unsafeProcBtn;
-    QWidget *attackPage;
+    QVBoxLayout *verticalLayout_4;
+    QWidget *widget_2;
     QHBoxLayout *horizontalLayout_2;
-    QSpacerItem *horizontalSpacer_3;
+    QToolButton *unsafeProcBtn;
+    QToolButton *safeProcBtn;
+    QWidget *widget_3;
+    QHBoxLayout *horizontalLayout_4;
     QToolButton *attackBtn;
-    QSpacerItem *horizontalSpacer_4;
     QWidget *helperWidget;
     QVBoxLayout *verticalLayout_2;
     QLabel *helperLabel;
@@ -85,7 +85,7 @@ public:
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/resources/start.png"), QSize(), QIcon::Normal, QIcon::Off);
         initBtn->setIcon(icon);
-        initBtn->setIconSize(QSize(72, 72));
+        initBtn->setIconSize(QSize(128, 128));
         initBtn->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
         initBtn->setAutoRaise(true);
 
@@ -98,44 +98,48 @@ public:
         controlStackedWidget->addWidget(loaderPage);
         procedurePage = new QWidget();
         procedurePage->setObjectName(QString::fromUtf8("procedurePage"));
-        horizontalLayout_4 = new QHBoxLayout(procedurePage);
-        horizontalLayout_4->setSpacing(6);
-        horizontalLayout_4->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        safeProcBtn = new QToolButton(procedurePage);
-        safeProcBtn->setObjectName(QString::fromUtf8("safeProcBtn"));
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/resources/safeProcedure.png"), QSize(), QIcon::Normal, QIcon::Off);
-        safeProcBtn->setIcon(icon1);
-        safeProcBtn->setIconSize(QSize(72, 72));
-        safeProcBtn->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
-        safeProcBtn->setAutoRaise(true);
-
-        horizontalLayout_4->addWidget(safeProcBtn);
-
-        unsafeProcBtn = new QToolButton(procedurePage);
+        verticalLayout_4 = new QVBoxLayout(procedurePage);
+        verticalLayout_4->setSpacing(6);
+        verticalLayout_4->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        widget_2 = new QWidget(procedurePage);
+        widget_2->setObjectName(QString::fromUtf8("widget_2"));
+        horizontalLayout_2 = new QHBoxLayout(widget_2);
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        unsafeProcBtn = new QToolButton(widget_2);
         unsafeProcBtn->setObjectName(QString::fromUtf8("unsafeProcBtn"));
-        QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/resources/unsafeProcedure.png"), QSize(), QIcon::Normal, QIcon::Off);
-        unsafeProcBtn->setIcon(icon2);
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/resources/unsafeProcedure.png"), QSize(), QIcon::Normal, QIcon::Off);
+        unsafeProcBtn->setIcon(icon1);
         unsafeProcBtn->setIconSize(QSize(72, 72));
         unsafeProcBtn->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
         unsafeProcBtn->setAutoRaise(true);
 
-        horizontalLayout_4->addWidget(unsafeProcBtn);
+        horizontalLayout_2->addWidget(unsafeProcBtn);
 
-        controlStackedWidget->addWidget(procedurePage);
-        attackPage = new QWidget();
-        attackPage->setObjectName(QString::fromUtf8("attackPage"));
-        horizontalLayout_2 = new QHBoxLayout(attackPage);
-        horizontalLayout_2->setSpacing(6);
-        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        safeProcBtn = new QToolButton(widget_2);
+        safeProcBtn->setObjectName(QString::fromUtf8("safeProcBtn"));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/resources/safeProcedure.png"), QSize(), QIcon::Normal, QIcon::Off);
+        safeProcBtn->setIcon(icon2);
+        safeProcBtn->setIconSize(QSize(72, 72));
+        safeProcBtn->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+        safeProcBtn->setAutoRaise(true);
 
-        horizontalLayout_2->addItem(horizontalSpacer_3);
+        horizontalLayout_2->addWidget(safeProcBtn);
 
-        attackBtn = new QToolButton(attackPage);
+
+        verticalLayout_4->addWidget(widget_2);
+
+        widget_3 = new QWidget(procedurePage);
+        widget_3->setObjectName(QString::fromUtf8("widget_3"));
+        horizontalLayout_4 = new QHBoxLayout(widget_3);
+        horizontalLayout_4->setSpacing(6);
+        horizontalLayout_4->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        attackBtn = new QToolButton(widget_3);
         attackBtn->setObjectName(QString::fromUtf8("attackBtn"));
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/resources/malware.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -144,13 +148,12 @@ public:
         attackBtn->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
         attackBtn->setAutoRaise(true);
 
-        horizontalLayout_2->addWidget(attackBtn);
+        horizontalLayout_4->addWidget(attackBtn);
 
-        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_2->addItem(horizontalSpacer_4);
+        verticalLayout_4->addWidget(widget_3);
 
-        controlStackedWidget->addWidget(attackPage);
+        controlStackedWidget->addWidget(procedurePage);
 
         horizontalLayout_3->addWidget(controlStackedWidget);
 
@@ -198,7 +201,7 @@ public:
 
         retranslateUi(ControlPanelClass);
 
-        controlStackedWidget->setCurrentIndex(1);
+        controlStackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(ControlPanelClass);
@@ -208,8 +211,8 @@ public:
     {
         ControlPanelClass->setWindowTitle(QApplication::translate("ControlPanelClass", "ControlPanel", nullptr));
         initBtn->setText(QApplication::translate("ControlPanelClass", "\345\210\235\345\247\213\345\214\226", nullptr));
-        safeProcBtn->setText(QApplication::translate("ControlPanelClass", "\345\256\211\345\205\250\347\232\204\350\277\207\347\250\213", nullptr));
         unsafeProcBtn->setText(QApplication::translate("ControlPanelClass", "\344\270\215\345\256\211\345\205\250\347\232\204\350\277\207\347\250\213", nullptr));
+        safeProcBtn->setText(QApplication::translate("ControlPanelClass", "\345\256\211\345\205\250\347\232\204\350\277\207\347\250\213", nullptr));
         attackBtn->setText(QApplication::translate("ControlPanelClass", "\345\274\200\345\247\213\346\224\273\345\207\273", nullptr));
         helperLabel->setText(QApplication::translate("ControlPanelClass", "\345\270\256\345\212\251\357\274\232", nullptr));
         outputLabel->setText(QApplication::translate("ControlPanelClass", "\347\212\266\346\200\201\350\276\223\345\207\272\357\274\232", nullptr));
