@@ -1,4 +1,5 @@
 #pragma once
+#pragma execution_character_set("utf-8")
 
 #include <QtWidgets/QWidget>
 #include <QPushButton>
@@ -6,6 +7,10 @@
 #include <QCloseEvent>
 #include <QMessageBox>
 #include "ui_ControlPanel.h"
+#include "dlcommon.h"
+#include "dlservices.h"
+#include "dldrivers.h"
+#include "dlioctl.h"
 
 class ControlPanel : public QWidget
 {
@@ -30,7 +35,17 @@ private:
 	bool isAttacked;
 	bool isSafeProcExecuted2;
 	bool isUnsafeProcExecuted2;
-	
+	QString protectedServiceName;
+	QString protectedServiceDisplayName;
+	QString protectedDriverPath;
+	QString protectedDeviceName;
+	ProtectedDriverControl protectedDriverControl;
+	QString malwareServiceName;
+	QString malwareServiceDisplayName;
+	QString malwareDriverPath;
+	QString malwareDeviceName;
+	MalwareDriverControl malwareDriverControl;
 
-
+	bool loadDriver(QString driverPath, QString serviceName, QString serviceDisplayName);
+	bool unloadDriver(QString serviceName);
 };

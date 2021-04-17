@@ -1,5 +1,4 @@
-#ifndef DLDRIVER_H
-#define DLDRIVER_H
+#pragma once
 
 /*
     This file is part of driver-loader
@@ -35,5 +34,3 @@ namespace Drivers {
     //get driver file last-write time
     QString GetFileLastWriteTime(QString fName);
 }
-
-#endif // DLDRIVER_H

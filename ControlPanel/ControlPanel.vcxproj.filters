@@ -44,10 +44,10 @@
     <ClCompile Include="dlcommon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dldrivers.cpp">
+    <ClCompile Include="dlservices.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dlservices.cpp">
+    <ClCompile Include="dlioctl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -55,13 +55,13 @@
     <ClInclude Include="dlcommon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="dlservices.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="dlconfig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="dldrivers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="dlservices.h">
+    <ClInclude Include="dlioctl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
