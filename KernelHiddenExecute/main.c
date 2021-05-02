@@ -36,12 +36,37 @@ NTSTATUS DispatchIoctl(PDEVICE_OBJECT pDevObj, PIRP pIrp)
 	ULONG uOutSize = pIrpStack->Parameters.DeviceIoControl.OutputBufferLength;
 	switch (uIoControlCode)
 	{
-	case IOCTL_TEST:
+	case IOCTL_SAFE_READ:
 	{
-		DWORD dw;
-		memcpy(&dw, pIoBuffer, sizeof(dw));
-		dw++;
-		memcpy(pIoBuffer, &dw, sizeof(dw));
+		ContextOriginalToHidden(g_pHiddenPageRecord);
+		strcpy(pIoBuffer, HiddenData);
+		ContextHiddenToOriginal(g_pHiddenPageRecord);
+		uOutSize = strlen(pIoBuffer);
+		status = STATUS_SUCCESS;
+		break;
+	}
+	case IOCTL_UNSAFE_READ:
+	{
+		strcpy(pIoBuffer, UnsafeData);
+		uOutSize = strlen(pIoBuffer);
+		status = STATUS_SUCCESS;
+		break;
+	}
+	case IOCTL_SAFE_EXEC:
+	{
+		ContextOriginalToHidden(g_pHiddenPageRecord);
+		BOOL result = HiddenFunction(pIoBuffer);
+		ContextHiddenToOriginal(g_pHiddenPageRecord);
+		*(PBOOL)pIoBuffer = result;
+		uOutSize = sizeof(BOOL);
+		status = STATUS_SUCCESS;
+		break;
+	}
+	case IOCTL_UNSAFE_EXEC:
+	{
+		BOOL result = UnsafeFunction(pIoBuffer);
+		*(PBOOL)pIoBuffer = result;
+		uOutSize = sizeof(BOOL);
 		status = STATUS_SUCCESS;
 		break;
 	}
@@ -69,20 +94,20 @@ VOID DriverUnload(PDRIVER_OBJECT pDriverObj)
 	IoDeleteSymbolicLink(&strLink);
 	IoDeleteDevice(pDriverObj->DeviceObject);
 }
-VOID WriteEnable()
-{
-	UINT64 cr0 = __readcr0();
-	cr0 &= 0xfffffffffffeffff;
-	__writecr0(cr0);
-	_disable();
-}
-VOID WriteDisable()
-{
-	UINT64 cr0 = __readcr0();
-	cr0 |= 0x10000;
-	_enable();
-	__writecr0(cr0);
-}
+//VOID WriteEnable()
+//{
+//	UINT64 cr0 = __readcr0();
+//	cr0 &= 0xfffffffffffeffff;
+//	__writecr0(cr0);
+//	_disable();
+//}
+//VOID WriteDisable()
+//{
+//	UINT64 cr0 = __readcr0();
+//	cr0 |= 0x10000;
+//	_enable();
+//	__writecr0(cr0);
+//}
 NTSTATUS DriverEntry(PDRIVER_OBJECT pDriverObj, PUNICODE_STRING pRegistryString)
 {
 	NTSTATUS status = STATUS_SUCCESS;
@@ -113,17 +138,18 @@ NTSTATUS DriverEntry(PDRIVER_OBJECT pDriverObj, PUNICODE_STRING pRegistryString)
 	MyPrint(_TitleAndFunc "Entry\n");
 
 	InitializeHiddenPageRecordStructure(&g_pHiddenPageRecord);
-	AddHiddenSection(GetCR3ByPID(4), pDriverObj, SECTION_NAME_HIDDEN, g_pHiddenPageRecord);
+	AddHiddenSection(GetCR3ByPID(4), pDriverObj, SECTION_NAME_HIDDEN_INSTRUCTIONS, g_pHiddenPageRecord);
+	AddHiddenSection(GetCR3ByPID(4), pDriverObj, SECTION_NAME_HIDDEN_DATA, g_pHiddenPageRecord);
 
-	WriteEnable();
-	RtlZeroMemory((PVOID)HiddenFunctionA, 10);
-	WriteDisable();
+	//WriteEnable();
+	//RtlZeroMemory((PVOID)HiddenFunctionA, 10);
+	//WriteDisable();
 
-	ContextOriginalToHidden(g_pHiddenPageRecord);
+	//ContextOriginalToHidden(g_pHiddenPageRecord);
 
-	HiddenFunctionA(g_pHiddenPageRecord);
+	//HiddenFunctionA(g_pHiddenPageRecord);
 
-	ContextHiddenToOriginal(g_pHiddenPageRecord);
+	//ContextHiddenToOriginal(g_pHiddenPageRecord);
 
 	return status;
 }

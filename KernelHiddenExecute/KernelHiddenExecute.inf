@@ -9,6 +9,7 @@ ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider=XYLab
 DriverVer=
 CatalogFile=KernelHiddenExecute.cat
+PnpLockDown=1
 
 ;[DestinationDirs]
 ;DefaultDestDir = 12

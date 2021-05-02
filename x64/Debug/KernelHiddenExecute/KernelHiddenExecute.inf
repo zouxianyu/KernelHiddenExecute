@@ -7,8 +7,9 @@ Signature="$WINDOWS NT$"
 Class=System
 ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider=XYLab
-DriverVer = 04/05/2021,14.0.58.364
+DriverVer = 05/02/2021,22.0.37.981
 CatalogFile=KernelHiddenExecute.cat
+PnpLockDown=1
 
 ;[DestinationDirs]
 ;DefaultDestDir = 12
