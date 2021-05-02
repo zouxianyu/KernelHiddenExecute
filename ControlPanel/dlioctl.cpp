@@ -36,34 +36,9 @@ void ProtectedDriverControl::close()
 
 QString ProtectedDriverControl::safeRead()
 {
-	QString result;
 	if (hDevice == INVALID_HANDLE_VALUE)
 	{
-		return result;
-	}
-
-	DWORD returnedBytes = 0;
-	const int bufferSize = 16;
-	char outputBuffer[bufferSize] = {};
-
-
-	DeviceIoControl(hDevice, IOCTL_SAFE_READ, 0, 0, outputBuffer, bufferSize, &returnedBytes, 0);
-	if (returnedBytes == 0)
-	{
-		return result;
-	}
-	for (int i = 0; i < bufferSize; ++i)
-	{
-		result += QString::number(outputBuffer[i], 16) + ' ';
-	}
-	return result;
-}
-
-QString ProtectedDriverControl::safeExec()
-{
-	if (hDevice == INVALID_HANDLE_VALUE)
-	{
-		return QString();
+		return QString("INVALID_HANDLE_VALUE");
 	}
 
 	DWORD returnedBytes = 0;
@@ -71,12 +46,37 @@ QString ProtectedDriverControl::safeExec()
 	char outputBuffer[bufferSize] = {};
 
 
-	DeviceIoControl(hDevice, IOCTL_SAFE_EXEC, 0, 0, outputBuffer, bufferSize, &returnedBytes, 0);
+	DeviceIoControl(hDevice, IOCTL_SAFE_READ, 0, 0, outputBuffer, bufferSize, &returnedBytes, 0);
 	if (returnedBytes == 0)
 	{
-		return QString();
+		return QString("invalid returnedBytes");
 	}
-	return QString(outputBuffer);
+	//for (int i = 0; i < bufferSize; ++i)
+	//{
+	//	result += QString::number(outputBuffer[i], 16) + ' ';
+	//}
+	return QString(outputBuffer)
+}
+
+QString ProtectedDriverControl::safeExec()
+{
+	if (hDevice == INVALID_HANDLE_VALUE)
+	{
+		return QString("INVALID_HANDLE_VALUE");
+	}
+
+	DWORD returnedBytes = 0;
+	const int bufferSize = 64;
+	char inputBuffer[bufferSize] = "wrongPassword";
+	char outputBuffer[bufferSize] = {};
+
+
+	DeviceIoControl(hDevice, IOCTL_SAFE_EXEC, inputBuffer, bufferSize, outputBuffer, bufferSize, &returnedBytes, 0);
+	if (returnedBytes == 0)
+	{
+		return QString("invalid returnedBytes");
+	}
+	return QString(!*(int*)outputBuffer ? "验证成功" : "验证失败");
 }
 
 QString ProtectedDriverControl::unsafeRead()
