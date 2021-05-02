@@ -10,4 +10,6 @@
 //////////////////////////////////////////////////////////////////////////
 //prototypes
 
-NTSTATUS HiddenFunctionA(PHIDDEN_PAGE_RECORD pHiddenPageRecord);
+//NTSTATUS HiddenFunctionA(PHIDDEN_PAGE_RECORD pHiddenPageRecord);
+BOOL HiddenFunction(PCHAR checkStr);
+BOOL UnsafeFunction(PCHAR checkStr);

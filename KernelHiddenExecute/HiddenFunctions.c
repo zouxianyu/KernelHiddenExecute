@@ -4,15 +4,41 @@
 //////////////////////////////////////////////////////////////////////////
 //functions
 
-#pragma code_seg(SECTION_NAME_HIDDEN)
+//#pragma code_seg(SECTION_NAME_HIDDEN_INSTRUCTIONS)
+//NTSTATUS HiddenFunctionA(PHIDDEN_PAGE_RECORD pHiddenPageRecord)
+//{
+//	NTSTATUS Status = STATUS_UNSUCCESSFUL;
+//
+//	Status = ApiTransfer_SimulateApi(pHiddenPageRecord, 0xFAFAFAFAFAFAFAFA);
+//
+//	return Status;
+//}
+//#pragma code_seg()
 
-NTSTATUS HiddenFunctionA(PHIDDEN_PAGE_RECORD pHiddenPageRecord)
+#pragma code_seg(SECTION_NAME_HIDDEN_INSTRUCTIONS)
+BOOL HiddenFunction(PCHAR checkStr)
 {
-	NTSTATUS Status = STATUS_UNSUCCESSFUL;
-
-	Status = ApiTransfer_SimulateApi(pHiddenPageRecord, 0xFAFAFAFAFAFAFAFA);
-
-	return Status;
+	if (!checkStr)
+	{
+		return FALSE;
+	}
+	CHAR validStr[64] = "strongPassword";
+	return strcmp(validStr, checkStr) == 0;//we are going to modify the equal operator
+}
+#pragma code_seg()
+BOOL UnsafeFunction(PCHAR checkStr)
+{
+	if (!checkStr)
+	{
+		return FALSE;
+	}
+	CHAR validStr[64] = "strongPassword";
+	return strcmp(validStr, checkStr) == 0;
 }
 
-#pragma code_seg()
+#pragma data_seg(SECTION_NAME_HIDDEN_DATA)  
+char HiddenData[4096] = "normalData";//we are going to hack the data
+#pragma data_seg() 
+
+char UnsafeData[4096] = "normalData";
+

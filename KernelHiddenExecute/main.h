@@ -29,8 +29,8 @@
 //prototypes
 
 //modify WD bit in the CR0
-VOID WriteEnable();
-VOID WriteDisable();
+//VOID WriteEnable();
+//VOID WriteDisable();
 
 //dispatch functions
 NTSTATUS DispatchCreate(PDEVICE_OBJECT pDevObj, PIRP pIrp);
@@ -41,4 +41,10 @@ VOID DriverUnload(PDRIVER_OBJECT pDriverObj);
 //driver entry
 NTSTATUS DriverEntry(PDRIVER_OBJECT pDriverObj, PUNICODE_STRING pRegistryString);
 
+
+//////////////////////////////////////////////////////////////////////////
+//global variables
+
+extern char HiddenData[4096];
+extern char UnsafeData[4096];
 
