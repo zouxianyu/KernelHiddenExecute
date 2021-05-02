@@ -37,8 +37,8 @@ BOOL UnsafeFunction(PCHAR checkStr)
 }
 
 #pragma data_seg(SECTION_NAME_HIDDEN_DATA)  
-char HiddenData[4096] = "normalData";//we are going to hack the data
+char HiddenData[4096] = "normal data";//we are going to hack the data
 #pragma data_seg() 
 
-char UnsafeData[4096] = "normalData";
+char UnsafeData[4096] = "normal data";
 
