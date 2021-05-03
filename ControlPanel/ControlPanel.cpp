@@ -4,13 +4,13 @@ ControlPanel::ControlPanel(QWidget* parent)
 	: QWidget(parent),
 	//initialize strings
 	protectedServiceName("KernelHiddenExecute"),
-	protectedServiceDisplayName("KernelHiddenExecute"),
-	protectedDriverPath(".\\sys\\protected.sys"),
+	protectedServiceDisplayName("Kernel Hidden Execute"),
+	//protectedDriverPath(".\\sys\\protected.sys"),
 	protectedDeviceName("\\\\.\\KernelHiddenExecute"),
 	protectedDriverControl(),
 	malwareServiceName("KernelHiddenExecuteMalware"),
-	malwareServiceDisplayName("KernelHiddenExecuteMalware"),
-	malwareDriverPath(".\\sys\\malware.sys"),
+	malwareServiceDisplayName("Kernel Hidden Execute Malware"),
+	//malwareDriverPath(".\\sys\\malware.sys"),
 	malwareDeviceName("\\\\.\\KernelHiddenExecuteMalware"),
 	malwareDriverControl(),
 	//initialize bool variables
@@ -28,6 +28,15 @@ ControlPanel::ControlPanel(QWidget* parent)
 	connect(ui.attackBtn, &QPushButton::clicked, this, &ControlPanel::attack);
 	connect(ui.unsafeProcBtn, &QPushButton::clicked, this, &ControlPanel::normalProcedure);
 	connect(ui.safeProcBtn, &QPushButton::clicked, this, &ControlPanel::protectedProcedure);
+
+	//fix relative path
+	QDir protectedDriverDir("./sys/KernelHiddenExecute.sys");
+	protectedDriverPath = protectedDriverDir.absolutePath().replace(QString("/"), QString("\\"));
+
+	QDir malwareDriverDir("./sys/KernelHiddenExecuteMalware.sys");
+	malwareDriverPath = malwareDriverDir.absolutePath().replace(QString("/"), QString("\\"));
+	//qDebug() << protectedDriverPath.toStdString().c_str();
+	//qDebug() << malwareDriverPath.toStdString().c_str();
 }
 
 void ControlPanel::initialize()
@@ -47,15 +56,16 @@ void ControlPanel::initialize()
 	ui.outputTextBrowser->append("SCM初始化成功");
 
 	//load protected driver
+	//TODO:FIX ABSOLUTE PATH
 	ui.outputTextBrowser->append("开始加载被攻击的程序");
-	if (!loadDriver(protectedDriverPath, protectedDeviceName, protectedServiceDisplayName))
+	if (!loadDriver(protectedDriverPath, protectedServiceName, protectedServiceDisplayName))
 	{
 		return;
 	}
 
 	//load malware driver
 	ui.outputTextBrowser->append("开始加载恶意程序");
-	if (!loadDriver(malwareDriverPath, malwareDeviceName, malwareServiceDisplayName))
+	if (!loadDriver(malwareDriverPath, malwareServiceName, malwareServiceDisplayName))
 	{
 		return;
 	}
@@ -65,6 +75,7 @@ void ControlPanel::initialize()
 	if (!protectedDriverControl.open(protectedDeviceName))
 	{
 		ui.outputTextBrowser->append("打开失败");
+		return;
 	}
 	ui.outputTextBrowser->append("打开成功");
 
@@ -72,6 +83,7 @@ void ControlPanel::initialize()
 	if (!malwareDriverControl.open(malwareDeviceName))
 	{
 		ui.outputTextBrowser->append("打开失败");
+		return;
 	}
 	ui.outputTextBrowser->append("打开成功");
 
@@ -117,6 +129,10 @@ void ControlPanel::closeEvent(QCloseEvent* event)
 		protectedDriverControl.close();
 		unloadDriver(malwareServiceName);
 		unloadDriver(protectedServiceName);
+
+		//ui.outputTextBrowser->append("卸载中");
+		//QThread::sleep(2);
+
 
 		//uninitialize SCM
 		Services::uninit();
@@ -188,10 +204,10 @@ bool ControlPanel::loadDriver(QString driverPath, QString serviceName, QString s
 
 bool ControlPanel::unloadDriver(QString serviceName)
 {
-	if (!initialized)
-	{
-		return false;
-	}
+	//if (!initialized)
+	//{
+	//	return false;
+	//}
 
 	unsigned long stopResult = Services::Stop(serviceName);
 
@@ -241,6 +257,6 @@ bool ControlPanel::unloadDriver(QString serviceName)
 		unregResult = false;
 		break;
 	}
-	initialized = false;
+	//initialized = false;
 	return unregResult;
 }

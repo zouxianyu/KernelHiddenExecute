@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QCloseEvent>
 #include <QMessageBox>
+#include <QDir>
 #include "ui_ControlPanel.h"
 #include "dlcommon.h"
 #include "dlservices.h"
