@@ -1,2 +1,10 @@
 .vs/
+test/
+Debug/
+Release/
 *.txt
+*.exe
+*.sys
+*.pdb
+*.obj
+*.ilk

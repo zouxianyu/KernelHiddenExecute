@@ -23,6 +23,7 @@ bool ProtectedDriverControl::open(QString deviceName)
 	{
 		return false;
 	}
+	return true;
 }
 
 void ProtectedDriverControl::close()
@@ -55,7 +56,7 @@ QString ProtectedDriverControl::safeRead()
 	//{
 	//	result += QString::number(outputBuffer[i], 16) + ' ';
 	//}
-	return QString(outputBuffer)
+	return QString(outputBuffer);
 }
 
 QString ProtectedDriverControl::safeExec()
@@ -118,6 +119,7 @@ bool MalwareDriverControl::open(QString deviceName)
 	{
 		return false;
 	}
+	return true;
 }
 
 void MalwareDriverControl::close()

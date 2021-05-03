@@ -33,8 +33,8 @@ reserve the physical pages by Api:MmMarkPhysicalMemoryAsBad,prevent the allocati
 //////////////////////////////////////////////////////////////////////////
 //constants and macros
 
-#define SECTION_NAME_HIDDEN_INSTRUCTIONS	".hiddeni"
-#define SECTION_NAME_HIDDEN_DATA			".hiddend"
+#define SECTION_NAME_HIDDEN_INSTRUCTIONS	".hi"
+#define SECTION_NAME_HIDDEN_DATA			".hd"
 #define HIDDEN_IRQL							DISPATCH_LEVEL
 #define HIDDEN_PAGE_RECORD_LENGTH			0x1000
 #define MAX_HIDDEN_PAGE_COUNT				126					//      (4096 - 40) / (4 * 8) = 126.75
