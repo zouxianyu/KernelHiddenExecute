@@ -14,12 +14,12 @@ ControlPanel::ControlPanel(QWidget* parent)
 	malwareDeviceName("\\\\.\\KernelHiddenExecuteMalware"),
 	malwareDriverControl(),
 	//initialize bool variables
-	initialized(false),
-	isSafeProcExecuted1(false),
-	isUnsafeProcExecuted1(false),
-	isAttacked(false),
-	isSafeProcExecuted2(false),
-	isUnsafeProcExecuted2(false)
+	initialized(false)
+	//isSafeProcExecuted1(false),
+	//isUnsafeProcExecuted1(false),
+	//isAttacked(false),
+	//isSafeProcExecuted2(false),
+	//isUnsafeProcExecuted2(false)
 {
 	ui.setupUi(this);
 
@@ -35,8 +35,11 @@ ControlPanel::ControlPanel(QWidget* parent)
 
 	QDir malwareDriverDir("./sys/KernelHiddenExecuteMalware.sys");
 	malwareDriverPath = malwareDriverDir.absolutePath().replace(QString("/"), QString("\\"));
-	//qDebug() << protectedDriverPath.toStdString().c_str();
-	//qDebug() << malwareDriverPath.toStdString().c_str();
+
+	//add helper text
+	ui.helperTextBrowser->clear();
+	ui.helperTextBrowser->append("请进行初始化");
+	ui.helperTextBrowser->append("下方会显示初始化的状态");
 }
 
 void ControlPanel::initialize()
@@ -91,6 +94,11 @@ void ControlPanel::initialize()
 
 	//scroll to next page
 	ui.controlStackedWidget->setCurrentIndex(1);
+
+	//add helper text
+	ui.helperTextBrowser->clear();
+	ui.helperTextBrowser->append("初始化成功");
+	ui.helperTextBrowser->append("建议先点击上方的两个按钮，观察程序的执行情况。然后再进行攻击。最后再次点击上方的两个按钮，再次观察程序的执行情况");
 }
 
 void ControlPanel::attack()
@@ -99,6 +107,7 @@ void ControlPanel::attack()
 	if (!malwareDriverControl.attack())
 	{
 		ui.outputTextBrowser->append("攻击失败");
+		return;
 	}
 	ui.outputTextBrowser->append("攻击成功");
 }
