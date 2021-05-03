@@ -1,5 +1,1 @@
-﻿  Building 'KernelHiddenExcute' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
-  Stamping x64\Release\KernelHiddenExcute.inf
-  Stamping [Version] section with DriverVer=04/05/2021,13.21.42.137
-C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\KernelHiddenExcute\KernelHiddenExcute.inf(5-5): warning 1324: [Version] section should specify PnpLockdown=1.
-  KernelHiddenExcute.vcxproj -> C:\Users\zxy20\Documents\GitHub\KernelHiddenExecute\x64\Release\KernelHiddenExcute.sys
+﻿
