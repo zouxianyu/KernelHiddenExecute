@@ -31,11 +31,11 @@ protected:
 private:
 	Ui::ControlPanelClass ui;
 	bool initialized;
-	bool isSafeProcExecuted1;
-	bool isUnsafeProcExecuted1;
-	bool isAttacked;
-	bool isSafeProcExecuted2;
-	bool isUnsafeProcExecuted2;
+	//bool isSafeProcExecuted1;
+	//bool isUnsafeProcExecuted1;
+	//bool isAttacked;
+	//bool isSafeProcExecuted2;
+	//bool isUnsafeProcExecuted2;
 	QString protectedServiceName;
 	QString protectedServiceDisplayName;
 	QString protectedDriverPath;
