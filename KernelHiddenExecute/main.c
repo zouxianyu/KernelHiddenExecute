@@ -41,14 +41,14 @@ NTSTATUS DispatchIoctl(PDEVICE_OBJECT pDevObj, PIRP pIrp)
 		ContextOriginalToHidden(g_pHiddenPageRecord);
 		strcpy(pIoBuffer, HiddenData);
 		ContextHiddenToOriginal(g_pHiddenPageRecord);
-		uOutSize = strlen(pIoBuffer);
+		//uOutSize = strlen(pIoBuffer);
 		status = STATUS_SUCCESS;
 		break;
 	}
 	case IOCTL_UNSAFE_READ:
 	{
 		strcpy(pIoBuffer, UnsafeData);
-		uOutSize = strlen(pIoBuffer);
+		//uOutSize = strlen(pIoBuffer);
 		status = STATUS_SUCCESS;
 		break;
 	}
@@ -58,7 +58,7 @@ NTSTATUS DispatchIoctl(PDEVICE_OBJECT pDevObj, PIRP pIrp)
 		BOOL result = HiddenFunction(pIoBuffer);
 		ContextHiddenToOriginal(g_pHiddenPageRecord);
 		*(PBOOL)pIoBuffer = result;
-		uOutSize = sizeof(BOOL);
+		//uOutSize = sizeof(BOOL);
 		status = STATUS_SUCCESS;
 		break;
 	}
@@ -66,7 +66,7 @@ NTSTATUS DispatchIoctl(PDEVICE_OBJECT pDevObj, PIRP pIrp)
 	{
 		BOOL result = UnsafeFunction(pIoBuffer);
 		*(PBOOL)pIoBuffer = result;
-		uOutSize = sizeof(BOOL);
+		//uOutSize = sizeof(BOOL);
 		status = STATUS_SUCCESS;
 		break;
 	}

@@ -46,16 +46,10 @@ QString ProtectedDriverControl::safeRead()
 	const int bufferSize = 64;
 	char outputBuffer[bufferSize] = {};
 
-
-	DeviceIoControl(hDevice, IOCTL_SAFE_READ, 0, 0, outputBuffer, bufferSize, &returnedBytes, 0);
-	if (returnedBytes == 0)
+	if (!DeviceIoControl(hDevice, IOCTL_SAFE_READ, NULL, 0, outputBuffer, bufferSize, &returnedBytes, 0))
 	{
-		return QString("invalid returnedBytes");
+		return QString("DeviceIoControl failed");
 	}
-	//for (int i = 0; i < bufferSize; ++i)
-	//{
-	//	result += QString::number(outputBuffer[i], 16) + ' ';
-	//}
 	return QString(outputBuffer);
 }
 
@@ -72,28 +66,49 @@ QString ProtectedDriverControl::safeExec()
 	char outputBuffer[bufferSize] = {};
 
 
-	DeviceIoControl(hDevice, IOCTL_SAFE_EXEC, inputBuffer, bufferSize, outputBuffer, bufferSize, &returnedBytes, 0);
-	if (returnedBytes == 0)
+	if (!DeviceIoControl(hDevice, IOCTL_SAFE_EXEC, inputBuffer, bufferSize, outputBuffer, bufferSize, &returnedBytes, 0))
 	{
-		return QString("invalid returnedBytes");
+		return QString("DeviceIoControl failed");
 	}
-	return QString(!*(int*)outputBuffer ? "验证成功" : "验证失败");
+	return QString(*(int*)outputBuffer ? "verification success" : "verification failed");
 }
 
 QString ProtectedDriverControl::unsafeRead()
 {
 	if (hDevice == INVALID_HANDLE_VALUE)
 	{
-		return QString();
+		return QString("INVALID_HANDLE_VALUE");
 	}
+
+	DWORD returnedBytes = 0;
+	const int bufferSize = 64;
+	char outputBuffer[bufferSize] = {};
+
+	if (!DeviceIoControl(hDevice, IOCTL_UNSAFE_READ, NULL, 0, outputBuffer, bufferSize, &returnedBytes, 0))
+	{
+		return QString("DeviceIoControl failed");
+	}
+	return QString(outputBuffer);
 }
 
 QString ProtectedDriverControl::unsafeExec()
 {
 	if (hDevice == INVALID_HANDLE_VALUE)
 	{
-		return QString();
+		return QString("INVALID_HANDLE_VALUE");
 	}
+
+	DWORD returnedBytes = 0;
+	const int bufferSize = 64;
+	char inputBuffer[bufferSize] = "wrongPassword";
+	char outputBuffer[bufferSize] = {};
+
+
+	if (!DeviceIoControl(hDevice, IOCTL_UNSAFE_EXEC, inputBuffer, bufferSize, outputBuffer, bufferSize, &returnedBytes, 0))
+	{
+		return QString("DeviceIoControl failed");
+	}
+	return QString(*(int*)outputBuffer ? "verification success" : "verification failed");
 }
 
 MalwareDriverControl::MalwareDriverControl()
@@ -137,4 +152,14 @@ bool MalwareDriverControl::attack()
 	{
 		return false;
 	}
+
+	DWORD returnedBytes = 0;
+	const int bufferSize = 64;
+	char outputBuffer[bufferSize] = {};
+
+	if (!DeviceIoControl(hDevice, IOCTL_ATTACK, NULL, 0, outputBuffer, bufferSize, &returnedBytes, 0))
+	{
+		return false;
+	}
+	return (bool)*(int*)outputBuffer;
 }

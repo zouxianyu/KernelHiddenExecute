@@ -7,7 +7,7 @@ Signature="$WINDOWS NT$"
 Class=System
 ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider=XYLab
-DriverVer = 05/03/2021,13.35.7.113
+DriverVer = 05/03/2021,15.19.21.227
 CatalogFile=KernelHiddenExecute.cat
 PnpLockDown=1
 
